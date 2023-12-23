@@ -25,7 +25,6 @@
         inputTextsOrCargo = path: type:
           (inputTexts path type) || (craneLib.filterCargoSources path type);
 
-
         craneLib = crane.lib.${system};
 
         # Common derivation arguments used for all builds
@@ -56,7 +55,7 @@
           # Additional arguments specific to this derivation can be added here.
           # Be warned that using `//` will not do a deep copy of nested
           # structures
-          pname = "aoc-deps";
+          pname = "binlog-deps";
         });
 
         mysql-binlog-repro-clippy = craneLib.cargoClippy (commonArgs // {
