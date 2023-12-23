@@ -21,3 +21,6 @@ See the resultant error:
 ```
 error handling binlog event Failed to parse [220, 35, 169, 185, 161, 41, 17, 238, 149, 251, 2, 66, 172, 17]: Error(ByteLength { len: 14 })
 ```
+
+
+We have a hacky workaround, that pads the returned vec before we parse it as a UUID. But, from reading MySQL docs this behavior would be correct for var* but not for char/binary.
