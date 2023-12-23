@@ -43,8 +43,7 @@
           ];
 
           nativeBuildInputs = with pkgs; [
-            # Add extra native build inputs here, etc.
-            # pkg-config
+            pkg-config
           ];
 
           # Additional environment variables can be set directly
