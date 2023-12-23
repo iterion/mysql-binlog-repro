@@ -1,0 +1,1 @@
+CREATE TABLE uuid_examples(id BINARY(16) PRIMARY KEY);

@@ -43,6 +43,7 @@
 
           nativeBuildInputs = with pkgs; [
             pkg-config
+            openssl
           ];
 
           # Additional environment variables can be set directly
@@ -90,7 +91,9 @@
 
           # Additional dev-shell environment variables can be set directly
           # MY_CUSTOM_DEVELOPMENT_VAR = "something else";
-          packages = [];
+          packages = [
+            pkgs.mysql80
+          ];
         };
         
         packages.docker =
