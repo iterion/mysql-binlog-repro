@@ -7,7 +7,7 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.76"
-futures-util = "0.3.29"
-mysql_async = "0.30.0"
+futures-util = "0.3.30"
+mysql_async = { version = "0.33", features = ["binlog"]}
 tokio = { version = "1", features = ["full", "time"]}
 uuid = "1.6.1"

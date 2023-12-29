@@ -33,7 +33,7 @@ async fn main() -> Result<()> {
     let last_position = binlog_positions.last().unwrap();
 
     // Now let's get the bin log stream.
-    let mut binlog_req = mysql_async::BinlogRequest::new(conn.id());
+    let mut binlog_req = mysql_async::BinlogStreamRequest::new(conn.id());
     // We want to set our position to the latest ones.
     binlog_req = binlog_req.with_filename(last_position.filename.as_bytes());
     binlog_req = binlog_req.with_pos(last_position.position as u64);
